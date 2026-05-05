@@ -5,15 +5,12 @@ function buildSystemPrompt(productContext) {
     id: p.id,
     nombre: p.nombre,
     marca: p.marca,
-    sitioMarca: p.sitioMarca,
     categoria: p.categoria,
     precio: p.precio + ' USD',
     cueroType: p.cueroType,
     anticaspa: p.anticaspa,
-    tiposCabello: p.tiposCabello,
-    beneficios: p.beneficios,
-    descripcion: p.descripcionLarga,
-    tags: p.tags
+    beneficios: p.beneficios.slice(0, 3),
+    descripcion: p.descripcionCorta
   }));
 
   let extra = '';
