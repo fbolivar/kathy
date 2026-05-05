@@ -1,0 +1,630 @@
+{
+  "mil-ac-herbal": {
+    "handle": "acondicionador-milagro-herbal-1",
+    "nombre": "ACONDICIONADOR MILAGRO HERBAL",
+    "precio": 25,
+    "imagen": "assets/images/mil-ac-herbal.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/Acondicionador-Ambientacion_c654aa7b-3da7-4ef9-9501-d075e42dca53.webp?v=1761005362"
+  },
+  "mil-sh-herbal": {
+    "handle": "shampoo-milagro-herbal",
+    "nombre": "SHAMPOO MILAGRO HERBAL",
+    "precio": 25,
+    "imagen": "assets/images/mil-sh-herbal.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/Shampoo-Ambientacion.webp?v=1761009485"
+  },
+  "mil-biorepol": {
+    "handle": "biorepolarizador-capilar-1",
+    "nombre": "BIO REPOLARIZADOR CAPILAR MILAGROS",
+    "precio": 25,
+    "imagen": "assets/images/mil-biorepol.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/Bio-Ambientacion_ce41165e-5c6e-488a-aab8-eb49b300e737.jpg?v=1761010221"
+  },
+  "mil-sh-ultra": {
+    "handle": "shampoo-ultranutritivo-milagros",
+    "nombre": "SHAMPOO ULTRA NUTRITIVO PREMIUM",
+    "precio": 25,
+    "imagen": "assets/images/mil-sh-ultra.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_12_Ultra-Fondo-blanco.png?v=1761011028"
+  },
+  "mil-sh-emer": {
+    "handle": "shampoo-emergencia-capilar",
+    "nombre": "SHAMPOO EMERGENCIA CAPILAR MILAGROS",
+    "precio": 25,
+    "imagen": "assets/images/mil-sh-emer.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_12_Emergencia-Fondo-blanco.png?v=1761010673"
+  },
+  "mil-ac-ultra": {
+    "handle": "acondicionador-ultra-nutritivo-premium",
+    "nombre": "ACONDICIONADOR ULTRA NUTRITIVO PREMIUM",
+    "precio": 25,
+    "imagen": "assets/images/mil-ac-ultra.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/Acondicionador-ambientacion_a6af791e-c93c-4af5-ae2b-33fe30ac9b85.webp?v=1761001037"
+  },
+  "mil-sh-cebolla": {
+    "handle": "shampoo-crecimiento-con-extracto-de-cebolla-y-peptidos",
+    "nombre": "SHAMPOO CRECIMIENTO CON EXTRACTO DE CEBOLLA Y PÉPTIDOS",
+    "precio": 25,
+    "imagen": "assets/images/mil-sh-cebolla.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/296705DA-15C9-4F5F-AB73-A16CB9FB8E4B.png?v=1761047109"
+  },
+  "mil-sh-magia": {
+    "handle": "shampoo-magia-capilar",
+    "nombre": "SHAMPOO MAGIA CAPILAR MILAGROS",
+    "precio": 25,
+    "imagen": "assets/images/mil-sh-magia.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1786.png?v=1726662668"
+  },
+  "mil-sh-caspa": {
+    "handle": "shampoo-anticaspa",
+    "nombre": "SHAMPOO ANTICASPA MILAGROS",
+    "precio": 25,
+    "imagen": "assets/images/mil-sh-caspa.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_12_Anti-caspa-Fondo-blanco_1.png?v=1761010852"
+  },
+  "mil-sh-arroz": {
+    "handle": "shampoo-arroz-y-acido-hialuronico-milagros-x-450ml-1",
+    "nombre": "SHAMPOO ARROZ Y ACIDO HIALURONICO MILAGROS X 450ML",
+    "precio": 25,
+    "imagen": "assets/images/mil-sh-arroz.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/5BC48DC2-61E2-4159-80F8-73508B2F34C5.png?v=1726658058"
+  },
+  "mil-mas-cebolla": {
+    "handle": "mascarilla-capilar-reparadora-intensiva-con-extracto-de-cebolla-y-peptidos",
+    "nombre": "MASCARILLA CAPILAR REPARADORA INTENSIVA CON EXTRACTO DE CEBOLLA Y PÉPTIDOS",
+    "precio": 25,
+    "imagen": "assets/images/mil-mas-cebolla.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-5852.png?v=1761048174"
+  },
+  "mil-mas-herbal": {
+    "handle": "mascarilla-capilar-milagro-herbal",
+    "nombre": "MASCARILLA CAPILAR MILAGRO HERBAL",
+    "precio": 25,
+    "imagen": "assets/images/mil-mas-herbal.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/Mascarilla-herbal-ambientacion.jpg?v=1761002594"
+  },
+  "mil-mas-rep": {
+    "handle": "mascarilla-reparacion-intensiva-milagros",
+    "nombre": "MASCARILLA REPARACIÓN INTENSIVA MILAGROS",
+    "precio": 30,
+    "imagen": "assets/images/mil-mas-rep.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/Mascarilla-de-reparacion-mobile.png?v=1742867602"
+  },
+  "mil-mas-multi": {
+    "handle": "mascarilla-capilar-multivitaminica-milagros-x-450g-1",
+    "nombre": "MASCARILLA CAPILAR MULTIVITAMINICA MILAGROS X 450G",
+    "precio": 25,
+    "imagen": "assets/images/mil-mas-multi.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/58811F5E-15C1-441D-A9B1-DF1CC6BBA04C.png?v=1726658286"
+  },
+  "mil-ac-arroz": {
+    "handle": "acondicionador-arroz-y-linaza-milagros-x-450ml-1",
+    "nombre": "ACONDICIONADOR ARROZ Y LINAZA MILAGROS X 450ML",
+    "precio": 25,
+    "imagen": "assets/images/mil-ac-arroz.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/3BAB351A-26BA-4F70-AAC6-42E4BEE0E33E.png?v=1760999061"
+  },
+  "mil-biorepol-1l": {
+    "handle": "tratamiento-bio-repolarizador-capilar-1-litro-milagros",
+    "nombre": "BIO REPOLARIZADOR CAPILAR - 1 LITRO MILAGROS",
+    "precio": 38,
+    "imagen": "assets/images/mil-biorepol-1l.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_17_Repo-litro-PNG.png?v=1766965325"
+  },
+  "mil-tonic": {
+    "handle": "tonico-milagro-herbal",
+    "nombre": "TÓNICO MILAGRO  HERBAL",
+    "precio": 28,
+    "imagen": "assets/images/mil-tonic.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1781.png?v=1761001345"
+  },
+  "mil-trat-frutas": {
+    "handle": "tratamiento-de-frutas",
+    "nombre": "TRATAMIENTO DE FRUTAS MILAGROS",
+    "precio": 25,
+    "imagen": "assets/images/mil-trat-frutas.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1791.png?v=1761010359"
+  },
+  "mil-termo": {
+    "handle": "desenredante-termoprotector-multibeneficios-1",
+    "nombre": "DESENREDANTE TERMOPROTECTOR MULTIBENEFICIOS",
+    "precio": 20,
+    "imagen": "assets/images/mil-termo.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_12_Desenredante-fondo-blanco.jpg?v=1761010032"
+  },
+  "mil-gotas": {
+    "handle": "gotas-magicas-capilares-1",
+    "nombre": "GOTAS MAGICAS CAPILARES",
+    "precio": 15,
+    "imagen": "assets/images/mil-gotas.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1616.jpg?v=1761009522"
+  },
+  "mil-termo-martina": {
+    "handle": "desenredante-termoprotector-multibeneficios-edicion-limitada-martina",
+    "nombre": "DESENREDANTE TERMOPROTECTOR MULTIBENEFICIOS EDICION LIMITADA MARTINA",
+    "precio": 20,
+    "imagen": "assets/images/mil-termo-martina.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/Desenredante-Martina-manos_1.webp?v=1761000468"
+  },
+  "mil-rizos-ter": {
+    "handle": "rizos-terapia-de-nutricion-y-crecimiento-1",
+    "nombre": "RIZOS TERAPIA DE NUTRICIÓN Y CRECIMIENTO",
+    "precio": 25,
+    "imagen": "assets/images/mil-rizos-ter.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1784.png?v=1761009917"
+  },
+  "mil-ampol-elixir": {
+    "handle": "ampolleta-elixir-revitalizante",
+    "nombre": "AMPOLLETA ELIXIR REVITALIZANTE",
+    "precio": 12,
+    "imagen": "assets/images/mil-ampol-elixir.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/FullSizeRender.jpg?v=1761002733"
+  },
+  "rb-serum": {
+    "handle": "serum-ritual-botanico-revitalizante-1",
+    "nombre": "SERUM RITUAL BOTANICO REVITALIZANTE",
+    "precio": 18,
+    "imagen": "assets/images/rb-serum.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_15_Serum-Fondo-blanco_1.jpg?v=1761009852"
+  },
+  "mil-rescate": {
+    "handle": "tratamiento-capilar-rescate-instantaneo-milagros",
+    "nombre": "AMPOLLETA RESCATE INSTANTANEO MILAGROS",
+    "precio": 12,
+    "imagen": "assets/images/mil-rescate.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/9AB5B1F6-1009-4108-896B-6C6D6CF13456.png?v=1725417207"
+  },
+  "any-sh-cebolla": {
+    "handle": "shampoo-crecimiento-con-extracto-de-cebolla-y-peptidos",
+    "nombre": "SHAMPOO CRECIMIENTO CON EXTRACTO DE CEBOLLA Y PÉPTIDOS",
+    "precio": 25,
+    "imagen": "assets/images/any-sh-cebolla.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/296705DA-15C9-4F5F-AB73-A16CB9FB8E4B.png?v=1761047109"
+  },
+  "mil-sh-seco": {
+    "handle": "shampoo-en-seco-voluminizador",
+    "nombre": "SHAMPOO EN SECO VOLUMINIZADOR",
+    "precio": 23,
+    "imagen": "assets/images/mil-sh-seco.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_10_Shampoo-en-seco-ambientacion2.jpg?v=1760999685"
+  },
+  "any-ter-cebolla": {
+    "handle": "terapia-capilar-de-crecimiento-cebolla-anyeluz",
+    "nombre": "TERAPIA CAPILAR DE CRECIMIENTO CEBOLLA ANYELUZ",
+    "precio": 25,
+    "imagen": "assets/images/any-ter-cebolla.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1738.png?v=1726660604"
+  },
+  "mil-wax": {
+    "handle": "hair-wax-stick-cera-cabello-milagros-1",
+    "nombre": "HAIR WAX STICK CERA CABELLO MILAGROS",
+    "precio": 25,
+    "imagen": "assets/images/mil-wax.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1507.png?v=1725336562"
+  },
+  "mil-sh-exfol": {
+    "handle": "shampoo-exfoliante-capilar",
+    "nombre": "SHAMPOO EXFOLIANTE CAPILAR",
+    "precio": 22,
+    "imagen": "assets/images/mil-sh-exfol.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_19_Shampoo_1.jpg?v=1760999512"
+  },
+  "any-ac-banano": {
+    "handle": "acondicionador-con-banano-anyeluz",
+    "precio": null,
+    "imagen": "assets/images/placeholder.svg",
+    "nombre": "acondicionador-con-banano-anyeluz"
+  },
+  "any-ac-argan": {
+    "handle": "acondicionador-de-argan-y-aloe-vera-anyeluz-500ml-1",
+    "nombre": "ACONDICIONADOR DE ARGAN Y ALOE VERA ANYELUZ 500ML",
+    "precio": 25,
+    "imagen": "assets/images/any-ac-argan.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/A832EF85-5ADF-4889-B328-5FFBD4D34EC8.png?v=1725969499"
+  },
+  "any-ac-romero": {
+    "handle": "acondicionador-de-romero-anyeluz-500ml-1",
+    "nombre": "ACONDICIONADOR DE ROMERO ANYELUZ 500ML",
+    "precio": 25,
+    "imagen": "assets/images/any-ac-romero.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/93A36226-AE55-45FF-9A16-93117EC8BEE7.png?v=1725970403"
+  },
+  "any-ac-ginseng": {
+    "handle": "acondicionador-con-ginseng-anyeluz-1",
+    "nombre": "ACONDICIONADOR CON GINSENG ANYELUZ",
+    "precio": 25,
+    "imagen": "assets/images/any-ac-ginseng.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/AF23BE67-9793-46A2-87FF-E80A3041DE05.png?v=1725415210"
+  },
+  "any-ac-cebolla": {
+    "handle": "acondicionador-de-cebolla-anyeluz-500ml-1",
+    "nombre": "ACONDICIONADOR DE CEBOLLA ANYELUZ 500ML",
+    "precio": 25,
+    "imagen": "assets/images/any-ac-cebolla.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/67AB3952-FF99-4708-A5B8-7ACE765F45EE.png?v=1725969745"
+  },
+  "any-oleo-argan": {
+    "handle": "oleo-capilar-de-argan-anyeluz",
+    "nombre": "ÓLEO CAPILAR DE ARGÁN ANYELUZ",
+    "precio": 30,
+    "imagen": "assets/images/any-oleo-argan.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/LISTING-OLEO-DE-ARGAN_8.webp?v=1749506704"
+  },
+  "any-gomitas": {
+    "handle": "gomitas-de-biotina-fortificadas-anyeluz",
+    "nombre": "GOMITAS DE BIOTINA FORTIFICADAS ANYELUZ",
+    "precio": 26,
+    "imagen": "assets/images/any-gomitas.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/WhatsAppImage2026-04-05at18.21.54.jpg?v=1775440354"
+  },
+  "any-kit-cebolla": {
+    "handle": "kit-cebolla-anyeluz",
+    "nombre": "KIT CEBOLLA ANYELUZ",
+    "precio": 120,
+    "imagen": "assets/images/any-kit-cebolla.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-2247.webp?v=1730641893"
+  },
+  "any-bioter": {
+    "handle": "bioterapia-capilar-con-romero-y-bioelixir-anyeluz-1",
+    "nombre": "BIOTERAPIA CAPILAR CON ROMERO Y BIOELIXIR ANYELUZ",
+    "precio": 25,
+    "imagen": "assets/images/any-bioter.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1605.jpg?v=1725970917"
+  },
+  "any-mas-banano": {
+    "handle": "mascarilla-nutritiva-con-banano-anyeluz",
+    "nombre": "MASCARILLA NUTRITIVA CON BANANO ANYELUZ",
+    "precio": 25,
+    "imagen": "assets/images/any-mas-banano.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/MASCARILLADEBANANO_1.jpg?v=1739238943"
+  },
+  "kab-ac-sos": {
+    "handle": "acondicionador-reparador-sos-kaba-450ml",
+    "nombre": "ACONDICIONADOR REPARADOR SOS KABA 450ML",
+    "precio": 38,
+    "imagen": "assets/images/kab-ac-sos.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_112_Acondicionador-Reparador-Kaba-SOS--Stickers--1.jpg?v=1761103262"
+  },
+  "any-sh-seco": {
+    "handle": "shampoo-seco-anyeluz",
+    "nombre": "SHAMPOO SECO ANYELUZ",
+    "precio": 25,
+    "imagen": "assets/images/any-sh-seco.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/2AB97D54-7351-49F8-9CCE-DAEE93B70EAD.png?v=1725415419"
+  },
+  "kab-sh-sos": {
+    "handle": "shampoo-reparador-sos-kaba-450ml",
+    "nombre": "SHAMPOO REPARADOR SOS KABA 450ML",
+    "precio": 38,
+    "imagen": "assets/images/kab-sh-sos.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_68_160191-1200-auto.webp?v=1761102002"
+  },
+  "any-crema-banano": {
+    "handle": "crema-para-peinar-con-banano-anyeluz",
+    "nombre": "CREMA PARA PEINAR CON BANANO ANYELUZ",
+    "precio": 25,
+    "imagen": "assets/images/any-crema-banano.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/CREMAPARAPEINARDEBANANO_1.jpg?v=1739239273"
+  },
+  "any-coctel": {
+    "handle": "coctel-frutal-anyeluz-515ml-1",
+    "nombre": "COCTEL FRUTAL ANYELUZ 515ML",
+    "precio": 25,
+    "imagen": "assets/images/any-coctel.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1609.jpg?v=1725971482"
+  },
+  "kab-ac-cer": {
+    "handle": "acondicionador-de-ceramidas-kaba-500-ml",
+    "nombre": "ACONDICIONADOR DE CERAMIDAS KABA 500 ML",
+    "precio": 25,
+    "imagen": "assets/images/kab-ac-cer.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_102_K047-1.jpg?v=1761098147"
+  },
+  "kab-sh-cebolla": {
+    "handle": "shampoo-de-cebolla-kaba-500ml",
+    "nombre": "SHAMPOO DE CEBOLLA KABA 500ML",
+    "precio": 25,
+    "imagen": "assets/images/kab-sh-cebolla.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_111_shampoo-de-cebolla-1.jpg?v=1761099857"
+  },
+  "kab-bio-mas": {
+    "handle": "bio-mascarilla-capilar-kaba-500ml",
+    "nombre": "BIO MASCARILLA CAPILAR KABA 500ML",
+    "precio": 26,
+    "imagen": "assets/images/kab-bio-mas.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_111_bio-mascarilla-capilar-1.jpg?v=1761098900"
+  },
+  "kab-kit-sos": {
+    "handle": "kit-kaba-sos",
+    "nombre": "KIT KABA SOS",
+    "precio": 115,
+    "imagen": "assets/images/kab-kit-sos.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_74_160254-1200-auto.webp?v=1761104675"
+  },
+  "kab-mas-sos": {
+    "handle": "mascarilla-reparadora-sos-kaba-450ml",
+    "nombre": "MASCARILLA REPARADORA SOS KABA 450ML",
+    "precio": 38,
+    "imagen": "assets/images/kab-mas-sos.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_94_Mascarilla-Reparadora-Kaba-SOS--stickers--1.jpg?v=1761102533"
+  },
+  "rb-ker-120": {
+    "handle": "keratina-rb-x-120ml-1",
+    "nombre": "KERATINA RB X 120ML",
+    "precio": 28,
+    "imagen": "assets/images/rb-ker-120.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_116_s-l1600.jpg?v=1761007541"
+  },
+  "rb-ker-1l": {
+    "handle": "keratina-rb-x-1lt-1",
+    "nombre": "KERATINA RB X 1 LITRO + KIT DE APLICACION GRATIS",
+    "precio": 85,
+    "imagen": "assets/images/rb-ker-1l.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1687.jpg?v=1726659244"
+  },
+  "rb-ker-250": {
+    "handle": "keratina-rb-x-250ml-1",
+    "nombre": "KERATINA RB X 250ML",
+    "precio": 48,
+    "imagen": "assets/images/rb-ker-250.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-1689.jpg?v=1726659293"
+  },
+  "rb-mas-bomba": {
+    "handle": "mascarilla-bomba-botanica-s-o-s-ritual-botanico",
+    "nombre": "MASCARILLA BOMBA BOTANICA S.O.S RITUAL BOTANICO",
+    "precio": 25,
+    "imagen": "assets/images/rb-mas-bomba.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/PAGINA-WEB-2025-07-600x600.jpg?v=1738722626"
+  },
+  "kab-pocima": {
+    "handle": "pocima-para-pestanas-kaba",
+    "nombre": "PÓCIMA PARA PESTAÑAS KABA",
+    "precio": 30,
+    "imagen": "assets/images/kab-pocima.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_44_158192-1200-auto.webp?v=1761099451"
+  },
+  "rb-sh-sos": {
+    "handle": "ritual-ultra-reparador-s-o-s-con-cebolla-y-argan-1",
+    "nombre": "SHAMPOO S.O.S CON CEBOLLA Y ARGAN X 400ML",
+    "precio": 23,
+    "imagen": "assets/images/rb-sh-sos.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/71aRV-zVazL._SX679.jpg?v=1736475387"
+  },
+  "rb-duo-termo": {
+    "handle": "duo-perfume-termoprotector-ritual-botanico",
+    "nombre": "DUO PERFUME TERMOPROTECTOR RITUAL BOTANICO",
+    "precio": 28,
+    "imagen": "assets/images/rb-duo-termo.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/PAGINA-WEB-2025-36-scaled.jpg?v=1743990447"
+  },
+  "rb-termo": {
+    "handle": "termoprotector-con-feromonas-ritual-b-x-120ml",
+    "nombre": "DESENREDANTE TERMOPROTECTOR Y PERFUME CON FEROMONAS RITUAL B. X 120ML",
+    "precio": 18,
+    "imagen": "assets/images/rb-termo.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/DD3FF8F5-3546-4A03-A484-3D80B0CD5770.png?v=1725417550"
+  },
+  "rb-sh-caspa": {
+    "handle": "ritual-purificante-control-caspa-con-menta-y-aji-1",
+    "nombre": "RITUAL PURIFICANTE CONTROL CASPA CON MENTA Y AJI",
+    "precio": 23,
+    "imagen": "assets/images/rb-sh-caspa.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/63954CD5-7A90-43D6-903A-30FF317A1F38.png?v=1725413988"
+  },
+  "rb-sh-grasa": {
+    "handle": "ritual-equilibrante-control-grasa-con-romero-y-eucalipto-1",
+    "nombre": "SHAMPOO CONTROL GRASA CON ROMERO Y EUCALIPTO (RITUAL BOTANICO) x 400ML",
+    "precio": 23,
+    "imagen": "assets/images/rb-sh-grasa.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/22B34954-97BB-4004-96AE-A6C84FE625BD.png?v=1725413421"
+  },
+  "poc-sh-caspa": {
+    "handle": "shampoo-control-caspa-450ml",
+    "nombre": "SHAMPOO CONTROL CASPA POCIÓN 450ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-sh-caspa.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_3_Shampoo_caspa_front_f9a54b34-40af-4540-b24c-0ac1f6ed29b3.png?v=1775587044"
+  },
+  "poc-sh-rizos": {
+    "handle": "shampoo-para-rizos-tongole-la-pocion-450ml",
+    "nombre": "SHAMPOO PARA RIZOS TONGOLÉ LA POCIÓN 450ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-sh-rizos.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_24_pocion-capilar-shampoo-tongole_08986508-ffc9-4924-9b01-69913c1c5d40.png?v=1761170131"
+  },
+  "poc-sh-grasa": {
+    "handle": "shampoo-control-grasa-la-pocion-450ml",
+    "nombre": "SHAMPOO CONTROL GRASA LA POCIÓN 450ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-sh-grasa.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_63_lapocion-lc-shampoo-control-grasa-front-4.png?v=1761172532"
+  },
+  "poc-sh-rep": {
+    "handle": "shampoo-de-reparacion-la-pocion",
+    "nombre": "SHAMPOO DE REPARACIÓN LA POCIÓN 450ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-sh-rep.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_174_pocion-capilar-shampoo.png?v=1761167614"
+  },
+  "poc-sh-crec": {
+    "handle": "shampoo-crecimiento-y-caida-la-pocion-450ml",
+    "nombre": "SHAMPOO CRECIMIENTO Y CAIDA LA POCIÓN 450ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-sh-crec.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_99_lapocion-lc-shampoo-crecimiento-y-control-caida-front-2.png?v=1761172886"
+  },
+  "poc-mas-rizos": {
+    "handle": "mascarilla-capilar-para-rizos-tongole-la-pocion-450ml",
+    "nombre": "MASCARILLA CAPILAR PARA RIZOS TONGOLÉ LA POCIÓN 450ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-mas-rizos.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_22_pocion-capilar-mascarilla-tongole_0517ae5c-6c42-44f4-a5ef-4aa02827b710.png?v=1761171663"
+  },
+  "poc-dutonic": {
+    "handle": "dutonic-la-pocion-2x60ml",
+    "nombre": "DUTONIC LA POCIÓN 2X60ML",
+    "precio": 33,
+    "imagen": "assets/images/poc-dutonic.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_116_pocion-capilar-dutonic_40ea1970-450f-4ddb-994b-2de33000c729.png?v=1761172252"
+  },
+  "poc-oleo-b8": {
+    "handle": "oleo-b8-brillo-infinito-la-pocion-30ml",
+    "nombre": "OLEO B8 BRILLO INFINITO LA POCIÓN 30ML",
+    "precio": 28,
+    "imagen": "assets/images/poc-oleo-b8.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_176_lapocion-lc-oleo-brillo-infinito.png?v=1761169849"
+  },
+  "poc-mas-anc": {
+    "handle": "mascarilla-ancestral-la-pocion-350ml",
+    "nombre": "MASCARILLA ANCESTRAL LA POCIÓN 350ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-mas-anc.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_102_pocion-capilar-ancestral_1.png?v=1761169435"
+  },
+  "poc-mas-bite": {
+    "handle": "mascarilla-bite-me-suplemento-capilar-la-pocion",
+    "nombre": "MASCARILLA BITE ME - SUPLEMENTO CAPILAR LA POCION",
+    "precio": 25,
+    "imagen": "assets/images/poc-mas-bite.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_113_pocion-capilar-bite-me.png?v=1766971668"
+  },
+  "poc-booster": {
+    "handle": "booster-tratamiento-capilar-reparador-la-pocion-50ml",
+    "nombre": "BOOSTER TRATAMIENTO CAPILAR REPARADOR LA POCIÓN 50ML",
+    "precio": 20,
+    "imagen": "assets/images/poc-booster.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_102_pcn-LC-Reparacion-Booster-Front-WhiteBG.webp?v=1761173166"
+  },
+  "poc-dual-crema": {
+    "handle": "dual-crema-para-peinar-la-pocion",
+    "nombre": "DUAL CREMA PARA PEINAR LA POCIÓN 450ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-dual-crema.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_20_pocion-capilar-dual.png?v=1761169121"
+  },
+  "poc-gel-rizos": {
+    "handle": "gel-definidor-de-rizos-tongole-la-pocion-500ml",
+    "nombre": "GEL DEFINIDOR DE RIZOS TONGOLÉ LA POCIÓN 500ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-gel-rizos.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_26_Gel_tongole_frente_0eaa71a8-36ae-4e8b-8844-c4722390fe85.webp?v=1761172058"
+  },
+  "poc-r3star": {
+    "handle": "r3star-plex-pocion-100ml",
+    "nombre": "R3STAR PLEX POCION 100ML",
+    "precio": 26,
+    "imagen": "assets/images/poc-r3star.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_94_lapocion-lc-r3start-plex.png?v=1775590366"
+  },
+  "poc-leave-on": {
+    "handle": "crema-para-peina-leave-on-tongole-la-pocion-450ml",
+    "nombre": "CREMA PARA PEINAR LEAVE ON TONGOLÉ LA POCIÓN 450ML",
+    "precio": 25,
+    "imagen": "assets/images/poc-leave-on.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_139_pocion-capilar-leave-on-tongole_13aeadaf-d5a2-441a-83f7-b5b3b9054b3f.png?v=1761171419"
+  },
+  "duv-ac-coco": {
+    "handle": "acondicionador-de-coco-duveshi-500ml-1",
+    "nombre": "ACONDICIONADOR DE COCO DUVESHI 500ML",
+    "precio": 25,
+    "imagen": "assets/images/duv-ac-coco.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_4_Duveshi-Acondiionador-3-en-1-coco.jpg?v=1761006867"
+  },
+  "poc-kit-rizos": {
+    "handle": "kit-para-rizos-tongole-la-pocion",
+    "nombre": "KIT PARA RIZOS TONGOLÉ LA POCIÓN",
+    "precio": 125,
+    "imagen": "assets/images/poc-kit-rizos.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_81_Kit_web.png?v=1761174506"
+  },
+  "poc-kit-rep": {
+    "handle": "kit-la-pocion",
+    "nombre": "KIT REPARACIÓN PROFUNDA LA POCIÓN",
+    "precio": 145,
+    "imagen": "assets/images/poc-kit-rep.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_115_lapocion-lc-kit-reparacion-profunda_ed23015f-add8-44f9-9983-30004e23b871.png?v=1761175443"
+  },
+  "poc-duo-caspa": {
+    "handle": "duo-control-caspa-pocion",
+    "nombre": "DUO CONTROL CASPA POCION",
+    "precio": 44.99,
+    "imagen": "assets/images/poc-duo-caspa.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_106_Kit_Caspa.png?v=1775595151"
+  },
+  "duv-sh-anticaida": {
+    "handle": "shampoo-anticaida-con-romero-y-jengibre-500ml-duveshi-1",
+    "nombre": "SHAMPOO ANTICAIDA CON ROMERO Y JENGIBRE 500ML DUVESHI",
+    "precio": 25,
+    "imagen": "assets/images/duv-sh-anticaida.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/9D398144-680A-4A82-A1D4-64E40492AB23.png?v=1726658777"
+  },
+  "kit-milagro-h": {
+    "handle": "kit-milagro-herbal",
+    "precio": null,
+    "imagen": "assets/images/placeholder.svg",
+    "nombre": "kit-milagro-herbal"
+  },
+  "rec-aceite": {
+    "handle": "aceite-reparador-de-puntas-la-receta-30ml",
+    "nombre": "ACEITE REPARADOR DE PUNTAS LA RECETA 30ML",
+    "precio": 22,
+    "imagen": "assets/images/rec-aceite.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_52_158620-1200-auto.webp?v=1761100912"
+  },
+  "rec-sh-romero": {
+    "handle": "shampoo-de-romero-para-cabello-graso-la-receta-450ml",
+    "nombre": "SHAMPOO DE ROMERO PARA CABELLO GRASO LA RECETA 450ML",
+    "precio": 26,
+    "imagen": "assets/images/rec-sh-romero.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_104_Shampoo-de-Romero-1.jpg?v=1761101308"
+  },
+  "kit-crec-frizz": {
+    "handle": "kit-crecimiento-y-anti-frizz-milagros",
+    "nombre": "KIT CRECIMIENTO Y ANTI-FRIZZ MILAGROS",
+    "precio": 75,
+    "imagen": "assets/images/kit-crec-frizz.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-5863.png?v=1761049543"
+  },
+  "duv-oro": {
+    "handle": "oro-liquido-50ml-duveshi-1",
+    "nombre": "ORO LIQUIDO 50ML DUVESHI",
+    "precio": 25,
+    "imagen": "assets/images/duv-oro.jpg",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_8_Aceite-categoria.jpg?v=1761007352"
+  },
+  "kit-duo-herbal": {
+    "handle": "duo-milagro-herbal",
+    "nombre": "KIT DUO MILAGRO HERBAL",
+    "precio": 50,
+    "imagen": "assets/images/kit-duo-herbal.webp",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-2152.webp?v=1730305980"
+  },
+  "sport-trat": {
+    "handle": "sport-tratamiento-de-ultra-proteccion",
+    "nombre": "SPORT TRATAMIENTO DE ULTRA PROTECCIÓN",
+    "precio": 25,
+    "imagen": "assets/images/sport-trat.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_31_PCN_Sportfrente.png?v=1775590774"
+  },
+  "kit-duo-magia": {
+    "handle": "duo-magia-capilar-milagros",
+    "nombre": "KIT DUO MAGIA CAPILAR MILAGROS",
+    "precio": 50,
+    "imagen": "assets/images/kit-duo-magia.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/IMG-2153.png?v=1730305956"
+  },
+  "poc-kit-kids": {
+    "handle": "kit-sin-enredos-kids-la-pocion",
+    "nombre": "KIT SIN ENREDOS KIDS LA POCIÓN",
+    "precio": 60,
+    "imagen": "assets/images/poc-kit-kids.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/imgi_85_kit-pocion-kids.png?v=1766972979"
+  },
+  "kit-menos-grasa": {
+    "handle": "kit-menos-grasa-menos-caida",
+    "nombre": "KIT MENOS GRASA, MENOS CAIDA",
+    "precio": 78,
+    "imagen": "assets/images/kit-menos-grasa.png",
+    "imgSrc": "https://cdn.shopify.com/s/files/1/0551/0466/7736/files/Menos-grasa-menos-caida-Ambientacion.png?v=1761001345"
+  }
+}

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparativo WhatsApp IA — Katheryn Boutique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF6F0;
+      --warm: #F2E8D9;
+      --gold: #C9A96E;
+      --gold-dark: #A8854A;
+      --brown: #3D2B1F;
+      --brown-light: #6B4C38;
+      --green: #4A6741;
+      --muted: #8B7355;
+      --text: #2C1A0E;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background: #fff;
+      color: var(--text);
+      font-size: 11pt;
+      line-height: 1.55;
+    }
+
+    /* ── PAGE LAYOUT ── */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 52px;
+    }
+
+    /* ── HEADER ── */
+    .doc-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 2.5px solid var(--gold);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+      gap: 20px;
+    }
+
+    .doc-brand {
+      font-family: var(--font-display);
+      font-size: 22pt;
+      font-weight: 600;
+      color: var(--brown);
+      line-height: 1.1;
+    }
+
+    .doc-brand span { color: var(--gold); }
+
+    .doc-meta {
+      text-align: right;
+      font-size: 8.5pt;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .doc-meta strong {
+      display: block;
+      font-size: 9pt;
+      color: var(--brown-light);
+      margin-bottom: 2px;
+    }
+
+    /* ── TITLE BLOCK ── */
+    .title-block {
+      background: linear-gradient(135deg, var(--brown) 0%, #5C3D2A 60%, var(--green) 100%);
+      color: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 36px;
+    }
+
+    .title-block h1 {
+      font-family: var(--font-display);
+      font-size: 20pt;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .title-block h1 em { color: var(--gold); font-style: italic; }
+
+    .title-block p {
+      font-size: 10pt;
+      opacity: 0.85;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .title-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .title-tag {
+      background: rgba(201,169,110,0.2);
+      border: 1px solid rgba(201,169,110,0.35);
+      color: var(--gold);
+      font-size: 7.5pt;
+      font-weight: 500;
+      padding: 3px 12px;
+      border-radius: 100px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── SECTION TITLES ── */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 15pt;
+      font-weight: 600;
+      color: var(--brown);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--warm);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .section { margin-bottom: 40px; }
+
+    /* ── CONTEXT BOX ── */
+    .context-box {
+      background: var(--cream);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      font-size: 10pt;
+      color: var(--brown-light);
+      line-height: 1.7;
+    }
+
+    .context-box strong { color: var(--brown); }
+
+    /* ── WHATSAPP OPTIONS ROW ── */
+    .wa-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .wa-option {
+      background: var(--cream);
+      border: 1.5px solid rgba(201,169,110,0.25);
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+
+    .wa-option-name {
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 6px;
+    }
+
+    .wa-option p { font-size: 9.5pt; color: var(--brown-light); line-height: 1.6; }
+    .wa-option .price { font-family: var(--font-display); font-size: 13pt; color: var(--brown); font-weight: 600; margin-top: 6px; }
+
+    /* ── MAIN TABLE ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(61,43,31,0.1);
+      margin-bottom: 16px;
+      font-size: 9pt;
+    }
+
+    .compare-table thead tr {
+      background: var(--brown);
+      color: #fff;
+    }
+
+    .compare-table thead th {
+      padding: 13px 12px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 8.5pt;
+      letter-spacing: 0.02em;
+    }
+
+    .compare-table thead th:first-child { width: 20%; }
+
+    .compare-table thead th.highlight {
+      background: var(--green);
+      position: relative;
+    }
+
+    .compare-table thead th.highlight::after {
+      content: '⭐ REC.';
+      display: block;
+      font-size: 6.5pt;
+      opacity: 0.85;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+      color: var(--gold);
+    }
+
+    .compare-table tbody tr:nth-child(even) { background: #FAFAFA; }
+    .compare-table tbody tr:nth-child(odd) { background: #fff; }
+
+    .compare-table tbody tr:hover { background: #FFF8F0; }
+
+    .compare-table tbody td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(201,169,110,0.12);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .compare-table tbody td:first-child {
+      font-weight: 600;
+      color: var(--brown);
+      background: var(--cream);
+      font-size: 8.5pt;
+    }
+
+    .compare-table tbody tr.total-row td {
+      background: var(--warm);
+      font-weight: 600;
+      font-size: 10pt;
+      color: var(--brown);
+      border-top: 2px solid var(--gold);
+    }
+
+    .compare-table tbody tr.total-row td:first-child {
+      background: #EDE0CC;
+    }
+
+    .col-highlight { background: rgba(74,103,65,0.04) !important; }
+    .col-highlight-total { background: rgba(74,103,65,0.1) !important; color: var(--green) !important; }
+
+    .yes { color: #2E7D32; font-weight: 500; }
+    .no  { color: #C62828; }
+    .mid { color: var(--gold-dark); font-weight: 500; }
+
+    .table-note {
+      font-size: 8pt;
+      color: var(--muted);
+      margin-bottom: 36px;
+      line-height: 1.7;
+      padding-left: 4px;
+    }
+
+    /* ── OPTION CARDS ── */
+    .option-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .option-card {
+      background: #fff;
+      border: 1.5px solid rgba(201,169,110,0.2);
+      border-radius: 12px;
+      padding: 18px 20px;
+      page-break-inside: avoid;
+    }
+
+    .option-card.featured {
+      border-color: var(--green);
+      background: rgba(74,103,65,0.03);
+    }
+
+    .option-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .option-num {
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .option-num.featured-label {
+      background: var(--green);
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 100px;
+    }
+
+    .option-card h3 {
+      font-family: var(--font-display);
+      font-size: 13pt;
+      color: var(--brown);
+      margin-bottom: 6px;
+    }
+
+    .option-card .for-who {
+      font-size: 8pt;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+    .pros, .cons {
+      font-size: 8.5pt;
+      line-height: 1.7;
+    }
+
+    .pros-title, .cons-title {
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .pros-title { color: #2E7D32; }
+    .cons-title { color: #C62828; }
+
+    .pros li::before { content: '✓ '; color: #2E7D32; font-weight: 600; }
+    .cons li::before { content: '✕ '; color: #C62828; font-weight: 600; }
+    ul { list-style: none; }
+
+    /* ── RECOMMENDATION BOX ── */
+    .recommendation {
+      background: linear-gradient(135deg, var(--brown), #5C3D2A);
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      page-break-inside: avoid;
+    }
+
+    .recommendation h2 {
+      font-family: var(--font-display);
+      font-size: 15pt;
+      margin-bottom: 16px;
+      color: var(--gold);
+    }
+
+    .rec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+
+    .rec-table th {
+      background: rgba(255,255,255,0.08);
+      padding: 9px 14px;
+      text-align: left;
+      font-size: 8pt;
+      font-weight: 500;
+      opacity: 0.8;
+      letter-spacing: 0.04em;
+    }
+
+    .rec-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.88);
+      vertical-align: top;
+    }
+
+    .rec-table td:first-child { color: rgba(255,255,255,0.65); font-size: 8.5pt; }
+    .rec-table td:last-child  { font-weight: 500; color: #fff; }
+
+    .rec-highlight {
+      background: rgba(201,169,110,0.15);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 16px;
+      font-size: 10pt;
+      line-height: 1.6;
+      border-left: 3px solid var(--gold);
+    }
+
+    .rec-highlight strong { color: var(--gold); }
+
+    /* ── FLOW DIAGRAM ── */
+    .flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .flow-step {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 10px 14px;
+      text-align: center;
+      font-size: 8.5pt;
+      min-width: 100px;
+    }
+
+    .flow-step strong { display: block; color: var(--gold); font-size: 9pt; margin-bottom: 3px; }
+
+    .flow-arrow {
+      color: var(--gold);
+      font-size: 14pt;
+      padding: 0 6px;
+    }
+
+    /* ── FOOTER ── */
+    .doc-footer {
+      border-top: 1.5px solid var(--warm);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8pt;
+      color: var(--muted);
+    }
+
+    .doc-footer strong { color: var(--gold-dark); }
+
+    /* ── PRINT ── */
+    @media print {
+      body { font-size: 10pt; }
+      .page { padding: 28px 36px; max-width: 100%; }
+      .title-block { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .recommendation { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .compare-table thead tr { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .compare-table thead th.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .compare-table tbody tr:nth-child(even) { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .compare-table tbody tr.total-row td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .option-card.featured { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .no-print { display: none !important; }
+      .page-break { page-break-before: always; }
+    }
+
+    /* ── PRINT BUTTON ── */
+    .print-bar {
+      background: var(--brown);
+      color: #fff;
+      padding: 14px 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 9pt;
+      gap: 16px;
+    }
+
+    .print-bar p { opacity: 0.75; }
+
+    .btn-print {
+      background: var(--gold);
+      color: var(--brown);
+      border: none;
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-size: 9.5pt;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font-body);
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-print:hover { background: var(--gold-dark); color: #fff; }
+
+    @media print { .print-bar { display: none; } }
+  </style>
+</head>
+<body>
+
+<!-- PRINT BAR -->
+<div class="print-bar no-print">
+  <p>Documento listo para exportar · Ctrl+P → Guardar como PDF → Sin márgenes</p>
+  <button class="btn-print" onclick="window.print()">Exportar PDF ↓</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div>
+      <div class="doc-brand">Katheryn <span>Boutique</span></div>
+      <div style="font-size:9pt; color:var(--muted); margin-top:4px;">ekaboutique.com · Distribuidores colombianos en EE.UU.</div>
+    </div>
+    <div class="doc-meta">
+      <strong>Propuesta Técnica</strong>
+      Automatización WhatsApp + IA<br>
+      Mayo 2025 · Confidencial
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="title-block">
+    <h1>Comparativo de Soluciones<br><em>WhatsApp + Inteligencia Artificial</em></h1>
+    <p>Análisis de alternativas para automatizar la atención al cliente con IA en WhatsApp, evaluando costo, facilidad de implementación y calidad de experiencia para el usuario final.</p>
+    <div class="title-tags">
+      <span class="title-tag">WhatsApp Business API</span>
+      <span class="title-tag">Claude AI</span>
+      <span class="title-tag">Automatización 24/7</span>
+      <span class="title-tag">Costo-eficiente</span>
+    </div>
+  </div>
+
+  <!-- CONTEXT -->
+  <div class="section">
+    <h2 class="section-title">Contexto del Proyecto</h2>
+    <div class="context-box">
+      Katheryn Boutique ya cuenta con <strong>Valentina</strong>, una asistente de asesoría capilar con IA (Claude) que opera en el sitio web ekaboutique.com. El objetivo es <strong>llevar esa misma experiencia a WhatsApp</strong>, el canal preferido de sus clientas, de forma automatizada y sin requerir personal de atención 24/7.
+    </div>
+
+    <p style="font-size:10pt; color:var(--brown-light); margin-bottom:16px;">El primer factor que determina el costo total es el <strong>acceso a WhatsApp Business API</strong>. Hay dos vías:</p>
+
+    <div class="wa-options">
+      <div class="wa-option">
+        <div class="wa-option-name">Meta Cloud API (Oficial)</div>
+        <p>La API oficial de WhatsApp / Meta. Requiere aprobación de 3–5 días hábiles. Primera conversación con cada usuario es gratuita cada 24h. Tarifa por conversación después del límite gratuito.</p>
+        <div class="price">Gratis · primeras 1,000 conv/mes<br><span style="font-size:9pt; font-weight:400; color:var(--muted)">luego ~$0.05 por conversación</span></div>
+      </div>
+      <div class="wa-option">
+        <div class="wa-option-name">Twilio WhatsApp</div>
+        <p>Proveedor intermedio que gestiona el acceso a WhatsApp. Sin esperar aprobación de Meta. Número disponible en 24h. Mayor facilidad técnica para integraciones.</p>
+        <div class="price">$15 USD/mes (número)<br><span style="font-size:9pt; font-weight:400; color:var(--muted)">+ $0.005 por mensaje enviado</span></div>
+      </div>
+    </div>
+    <p style="font-size:8.5pt; color:var(--muted);">* Todas las opciones del comparativo pueden usar cualquiera de las dos vías de acceso a WhatsApp. Los costos estimados de la tabla usan <strong>Meta Cloud API</strong> por ser la más económica.</p>
+  </div>
+
+  <!-- TABLE -->
+  <div class="section">
+    <h2 class="section-title">Cuadro Comparativo General</h2>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Criterio</th>
+          <th>Código Propio</th>
+          <th class="highlight">n8n Self-hosted</th>
+          <th>Make (Integromat)</th>
+          <th>ManyChat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Costo plataforma/mes</td>
+          <td>$0</td>
+          <td class="col-highlight">$0 (open source)</td>
+          <td>$0 Free / $9 Core</td>
+          <td>$15 Pro</td>
+        </tr>
+        <tr>
+          <td>WhatsApp API</td>
+          <td>Meta Cloud (gratis*)</td>
+          <td class="col-highlight">Meta Cloud (gratis*)</td>
+          <td>Meta Cloud (gratis*)</td>
+          <td>Incluida en plan</td>
+        </tr>
+        <tr>
+          <td>Servidor / hosting</td>
+          <td>Render ~$7/mes</td>
+          <td class="col-highlight">Render ~$7/mes</td>
+          <td>No necesita</td>
+          <td>No necesita</td>
+        </tr>
+        <tr>
+          <td>IA (Claude API)</td>
+          <td>~$1–5/mes</td>
+          <td class="col-highlight">~$1–5/mes</td>
+          <td>~$1–5/mes</td>
+          <td>IA básica incluida</td>
+        </tr>
+        <tr class="total-row">
+          <td>TOTAL ESTIMADO/MES</td>
+          <td>$8–12 USD</td>
+          <td class="col-highlight-total">$8–12 USD</td>
+          <td>$1–14 USD</td>
+          <td>$15 USD</td>
+        </tr>
+        <tr>
+          <td>Calidad de IA</td>
+          <td class="yes">Claude completo</td>
+          <td class="col-highlight yes">Claude completo</td>
+          <td class="yes">Claude completo</td>
+          <td class="mid">IA genérica básica</td>
+        </tr>
+        <tr>
+          <td>Conoce el catálogo</td>
+          <td class="yes">Sí, completo</td>
+          <td class="col-highlight yes">Sí, completo</td>
+          <td class="yes">Sí, completo</td>
+          <td class="no">No (solo preguntas/resp.)</td>
+        </tr>
+        <tr>
+          <td>Atención 24/7 real</td>
+          <td class="yes">Sí</td>
+          <td class="col-highlight yes">Sí</td>
+          <td class="yes">Sí</td>
+          <td class="yes">Sí</td>
+        </tr>
+        <tr>
+          <td>Setup técnico</td>
+          <td class="no">Alto — requiere dev</td>
+          <td class="col-highlight mid">Medio — visual</td>
+          <td class="yes">Bajo — drag & drop</td>
+          <td class="yes">Muy bajo</td>
+        </tr>
+        <tr>
+          <td>Tiempo implementación</td>
+          <td>2–3 días</td>
+          <td class="col-highlight">1–2 días</td>
+          <td>4–8 horas</td>
+          <td>2–4 horas</td>
+        </tr>
+        <tr>
+          <td>Mantenimiento</td>
+          <td class="no">Requiere dev</td>
+          <td class="col-highlight mid">Mínimo</td>
+          <td class="yes">Ninguno</td>
+          <td class="yes">Ninguno</td>
+        </tr>
+        <tr>
+          <td>Escalable a Instagram / email</td>
+          <td class="yes">Sí</td>
+          <td class="col-highlight yes">Sí, fácilmente</td>
+          <td class="yes">Sí</td>
+          <td class="mid">Solo sus canales</td>
+        </tr>
+        <tr>
+          <td>Personalización</td>
+          <td class="yes">Total</td>
+          <td class="col-highlight yes">Alta</td>
+          <td class="mid">Media</td>
+          <td class="no">Baja</td>
+        </tr>
+        <tr>
+          <td>Historial de conversaciones</td>
+          <td class="mid">Manual</td>
+          <td class="col-highlight yes">Automático</td>
+          <td class="yes">Automático</td>
+          <td class="yes">Panel propio</td>
+        </tr>
+        <tr>
+          <td>Dependencia de terceros</td>
+          <td class="yes">Mínima</td>
+          <td class="col-highlight yes">Mínima</td>
+          <td class="mid">Media (Make)</td>
+          <td class="no">Alta (ManyChat)</td>
+        </tr>
+        <tr>
+          <td>Aprobación de Meta</td>
+          <td class="mid">Sí (3–5 días)</td>
+          <td class="col-highlight mid">Sí (3–5 días)</td>
+          <td class="mid">Sí (3–5 días)</td>
+          <td class="yes">Ellos la gestionan</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="table-note">
+      * Meta Cloud API: gratis hasta 1,000 conversaciones/mes (suficiente para arrancar). Luego ~$0.05 por conversación.
+      &nbsp;·&nbsp; ** Claude API Haiku: ~$0.80/millón tokens. 200 conversaciones/mes ≈ $1–3 USD.
+      &nbsp;·&nbsp; Costos estimados para volumen inicial de un negocio pequeño (&lt;500 mensajes/mes).
+    </p>
+  </div>
+
+  <!-- PAGE BREAK -->
+  <div class="page-break"></div>
+
+  <!-- OPTION CARDS -->
+  <div class="section">
+    <h2 class="section-title">Análisis por Opción</h2>
+    <div class="option-cards">
+
+      <div class="option-card">
+        <div class="option-card-header">
+          <span class="option-num">Opción 1</span>
+        </div>
+        <h3>Código Propio</h3>
+        <p class="for-who">Para negocios que ya tienen un desarrollador o quieren control total.</p>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">Ventajas</div>
+            <ul>
+              <li>Valentina ya existe — solo conectar webhook</li>
+              <li>Costo marginal más bajo a largo plazo</li>
+              <li>Cero dependencia de plataformas externas</li>
+              <li>Personalización ilimitada</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">Desventajas</div>
+            <ul>
+              <li>Requiere programador para cambios</li>
+              <li>Si el servidor cae, se cae todo</li>
+              <li>Mayor tiempo de desarrollo inicial</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="option-card featured">
+        <div class="option-card-header">
+          <span class="option-num featured-label">⭐ Recomendada · Opción 2</span>
+        </div>
+        <h3>n8n Self-hosted</h3>
+        <p class="for-who">Para negocios que quieren automatización real con el menor costo posible.</p>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">Ventajas</div>
+            <ul>
+              <li>Software open source — gratis para siempre</li>
+              <li>Interfaz visual, sin código</li>
+              <li>Valentina (Claude) integrada completa</li>
+              <li>Escala a otros canales fácilmente</li>
+              <li>Historial y analytics automáticos</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">Desventajas</div>
+            <ul>
+              <li>Requiere configuración inicial</li>
+              <li>Self-hosted = responsabilidad del servidor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="option-card">
+        <div class="option-card-header">
+          <span class="option-num">Opción 3</span>
+        </div>
+        <h3>Make (Integromat)</h3>
+        <p class="for-who">Para negocios que quieren lo más simple sin instalar nada.</p>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">Ventajas</div>
+            <ul>
+              <li>100% en la nube, cero instalación</li>
+              <li>Plan gratuito para comenzar</li>
+              <li>Interfaz muy amigable</li>
+              <li>Se conecta con Claude via HTTP</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">Desventajas</div>
+            <ul>
+              <li>Plan free se agota rápido con volumen</li>
+              <li>Costo escala con el uso</li>
+              <li>Menos flexible para flujos complejos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="option-card">
+        <div class="option-card-header">
+          <span class="option-num">Opción 4</span>
+        </div>
+        <h3>ManyChat</h3>
+        <p class="for-who">Para negocios sin conocimiento técnico que quieren algo funcionando hoy.</p>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">Ventajas</div>
+            <ul>
+              <li>El más fácil de configurar</li>
+              <li>Gestiona WhatsApp Business API</li>
+              <li>Panel de analytics incluido</li>
+              <li>Sin trámites con Meta</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">Desventajas</div>
+            <ul>
+              <li>IA básica — no es Claude</li>
+              <li>No conoce el catálogo ekaboutique</li>
+              <li>Menos control sobre Valentina</li>
+              <li>Costo fijo aunque no se use</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLUJO N8N -->
+  <div class="section">
+    <h2 class="section-title">Flujo con n8n + Valentina (Opción Recomendada)</h2>
+    <div class="recommendation" style="padding: 22px 28px;">
+      <div class="flow">
+        <div class="flow-step"><strong>Clienta</strong>Escribe en WhatsApp</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>Meta API</strong>Webhook recibe mensaje</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>n8n</strong>Procesa el flujo</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>Claude API</strong>Valentina responde</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>WhatsApp</strong>Respuesta al instante</div>
+      </div>
+      <div class="rec-highlight" style="margin-top:16px;">
+        Valentina recibe el mensaje, consulta el catálogo de <strong>20 productos de 8 marcas</strong>, hace las preguntas de diagnóstico necesarias y recomienda los productos exactos — todo en WhatsApp, sin intervención humana.
+      </div>
+    </div>
+  </div>
+
+  <!-- RECOMMENDATION -->
+  <div class="section">
+    <h2 class="section-title">Recomendación por Escenario</h2>
+    <div class="recommendation">
+      <h2>¿Cuál elegir según el negocio?</h2>
+      <table class="rec-table">
+        <thead>
+          <tr>
+            <th>Escenario del negocio</th>
+            <th>Opción recomendada</th>
+            <th>Costo aprox./mes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Arrancar con 0 riesgo, validar el canal</td>
+            <td>Make Plan Free + Meta Cloud API</td>
+            <td>$1–3 USD</td>
+          </tr>
+          <tr>
+            <td>Costo mínimo + máxima calidad de IA</td>
+            <td>n8n self-hosted + Meta Cloud API</td>
+            <td>$8–12 USD</td>
+          </tr>
+          <tr>
+            <td>Máxima facilidad, sin ningún técnico</td>
+            <td>ManyChat Pro</td>
+            <td>$15 USD</td>
+          </tr>
+          <tr>
+            <td>Control total + escalar a más canales</td>
+            <td>Código propio (ya existe el 80%)</td>
+            <td>$8–12 USD</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="rec-highlight">
+        <strong>Recomendación concreta:</strong> Comenzar con <strong>Make Plan Gratuito</strong> para validar el canal sin costo en las primeras semanas. Si el volumen crece, migrar a <strong>n8n self-hosted en Render.com</strong> por ~$9/mes con Valentina (Claude) respondiendo 24/7 con el catálogo completo de ekaboutique.
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>
+      <strong>Katheryn Boutique</strong> · ekaboutique.com<br>
+      Documento confidencial — Propuesta técnica Mayo 2025
+    </div>
+    <div style="text-align:right;">
+      Preparado con <strong>Claude Code + Anthropic API</strong><br>
+      Powered by BC Fabric SAS
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

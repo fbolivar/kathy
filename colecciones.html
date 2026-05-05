@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos — Katheryn Boutique</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/chat.css">
+</head>
+<body>
+
+  <!-- INFO BANNER -->
+  <div class="info-banner">
+    <strong>Envío gratis</strong> en EE.UU. para compras mayores a $70 USD
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">Katheryn <span>Boutique</span></a>
+      <nav class="site-nav">
+        <a href="index.html">Inicio</a>
+        <a href="colecciones.html" class="active">Productos</a>
+        <a href="colecciones.html?cat=Kit">Kits</a>
+        <a href="index.html#marcas">Marcas</a>
+        <a href="index.html#nosotros">Nosotros</a>
+      </nav>
+      <span class="header-badge">Colombia ❤️ EE.UU.</span>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Nuestros <em>Productos</em></h1>
+    <p>Descubre las mejores marcas colombianas para el cuidado de tu cabello</p>
+  </div>
+
+  <!-- COLLECTIONS LAYOUT -->
+  <div class="collections-layout">
+
+    <!-- FILTERS SIDEBAR -->
+    <aside class="filters-panel">
+      <h2 class="filters-title">Filtros</h2>
+
+      <div class="filter-group">
+        <span class="filter-group-label">Categoría</span>
+        <div class="filter-options" id="filter-categoria"></div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label">Marca</span>
+        <div class="filter-options" id="filter-marca"></div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label">Precio</span>
+        <div class="filter-options">
+          <label class="filter-option">
+            <input type="checkbox" name="precio" value="0-25"> Hasta $25 USD
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="precio" value="25-35"> $25 – $35 USD
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="precio" value="35-999"> Más de $35 USD
+          </label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label">Tipo de cabello</span>
+        <div class="filter-options" id="filter-tipo"></div>
+      </div>
+
+      <button class="filters-reset" id="filters-reset">Limpiar filtros</button>
+    </aside>
+
+    <!-- CATALOG -->
+    <main>
+      <div class="catalog-header">
+        <div class="catalog-count" id="catalog-count">Cargando productos…</div>
+        <select class="catalog-sort" id="catalog-sort">
+          <option value="default">Ordenar: Destacados</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre: A–Z</option>
+        </select>
+      </div>
+      <div class="products-grid" id="catalog-grid"></div>
+      <p id="no-results" style="display:none; text-align:center; color:var(--muted); padding:60px 20px; font-size:1.1rem;">
+        No se encontraron productos con esos filtros.
+      </p>
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/chat.js"></script>
+  <script>
+    // ── State ──
+    const activeFilters = { categoria: new Set(), marca: new Set(), precio: new Set(), tipo: new Set() };
+
+    // ── URL param pre-filter ──
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlCat = urlParams.get('cat');
+    if (urlCat) activeFilters.categoria.add(urlCat);
+
+    // ── Build filter options ──
+    function buildFilters() {
+      const categorias = [...new Set(CATALOG.map(p => p.categoria))].sort();
+      const marcas = [...new Set(CATALOG.map(p => p.marca))].sort();
+      const tipos = [...new Set(CATALOG.flatMap(p => p.tiposCabello))].sort();
+
+      const catEl = document.getElementById('filter-categoria');
+      categorias.forEach(c => {
+        const count = CATALOG.filter(p => p.categoria === c).length;
+        catEl.innerHTML += `
+          <label class="filter-option">
+            <input type="checkbox" name="categoria" value="${c}" ${activeFilters.categoria.has(c) ? 'checked' : ''}>
+            ${c} <span class="filter-count">${count}</span>
+          </label>`;
+      });
+
+      const marcaEl = document.getElementById('filter-marca');
+      marcas.forEach(m => {
+        const count = CATALOG.filter(p => p.marca === m).length;
+        marcaEl.innerHTML += `
+          <label class="filter-option">
+            <input type="checkbox" name="marca" value="${m}">
+            ${m} <span class="filter-count">${count}</span>
+          </label>`;
+      });
+
+      const tipoEl = document.getElementById('filter-tipo');
+      const tiposComunes = ['seco', 'graso', 'rizado', 'ondulado', 'con caída', 'dañado', 'teñido', 'afro'];
+      tiposComunes.forEach(t => {
+        const count = CATALOG.filter(p => p.tiposCabello.some(tc => tc.toLowerCase().includes(t))).length;
+        if (count > 0) {
+          tipoEl.innerHTML += `
+            <label class="filter-option">
+              <input type="checkbox" name="tipo" value="${t}">
+              ${t.charAt(0).toUpperCase() + t.slice(1)} <span class="filter-count">${count}</span>
+            </label>`;
+        }
+      });
+
+      // Event listeners
+      document.querySelectorAll('.filter-options input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          const set = activeFilters[cb.name];
+          cb.checked ? set.add(cb.value) : set.delete(cb.value);
+          renderCatalog();
+        });
+      });
+    }
+
+    // ── Filter & render ──
+    function filterProducts() {
+      return CATALOG.filter(p => {
+        if (activeFilters.categoria.size > 0 && !activeFilters.categoria.has(p.categoria)) return false;
+        if (activeFilters.marca.size > 0 && !activeFilters.marca.has(p.marca)) return false;
+        if (activeFilters.precio.size > 0) {
+          const match = [...activeFilters.precio].some(range => {
+            const [min, max] = range.split('-').map(Number);
+            return p.precio >= min && p.precio <= max;
+          });
+          if (!match) return false;
+        }
+        if (activeFilters.tipo.size > 0) {
+          const match = [...activeFilters.tipo].some(t =>
+            p.tiposCabello.some(tc => tc.toLowerCase().includes(t))
+          );
+          if (!match) return false;
+        }
+        return true;
+      });
+    }
+
+    function sortProducts(products) {
+      const sort = document.getElementById('catalog-sort').value;
+      const sorted = [...products];
+      if (sort === 'precio-asc') sorted.sort((a, b) => a.precio - b.precio);
+      else if (sort === 'precio-desc') sorted.sort((a, b) => b.precio - a.precio);
+      else if (sort === 'nombre') sorted.sort((a, b) => a.nombre.localeCompare(b.nombre));
+      else sorted.sort((a, b) => (b.destacado ? 1 : 0) - (a.destacado ? 1 : 0));
+      return sorted;
+    }
+
+    function renderCatalog() {
+      const filtered = sortProducts(filterProducts());
+      const grid = document.getElementById('catalog-grid');
+      const noRes = document.getElementById('no-results');
+      const count = document.getElementById('catalog-count');
+
+      grid.innerHTML = '';
+      if (filtered.length === 0) {
+        noRes.style.display = 'block';
+        count.textContent = '0 productos';
+      } else {
+        noRes.style.display = 'none';
+        count.textContent = `${filtered.length} producto${filtered.length !== 1 ? 's' : ''}`;
+        filtered.forEach(p => { grid.innerHTML += buildProductCard(p); });
+      }
+    }
+
+    // ── Reset ──
+    document.getElementById('filters-reset').addEventListener('click', () => {
+      Object.values(activeFilters).forEach(s => s.clear());
+      document.querySelectorAll('.filter-options input').forEach(cb => cb.checked = false);
+      renderCatalog();
+    });
+
+    document.getElementById('catalog-sort').addEventListener('change', renderCatalog);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      buildFilters();
+      renderCatalog();
+    });
+  </script>
+</body>
+</html>

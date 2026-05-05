@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto — Katheryn Boutique</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/chat.css">
+</head>
+<body>
+
+  <!-- INFO BANNER -->
+  <div class="info-banner">
+    <strong>Envío gratis</strong> en EE.UU. para compras mayores a $70 USD
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">Katheryn <span>Boutique</span></a>
+      <nav class="site-nav">
+        <a href="index.html">Inicio</a>
+        <a href="colecciones.html" class="active">Productos</a>
+        <a href="colecciones.html?cat=Kit">Kits</a>
+        <a href="index.html#marcas">Marcas</a>
+        <a href="index.html#nosotros">Nosotros</a>
+      </nav>
+      <span class="header-badge">Colombia ❤️ EE.UU.</span>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div style="max-width:1100px; margin:0 auto; padding:16px 24px; font-size:0.8rem; color:var(--muted);">
+    <a href="index.html" style="color:var(--gold);">Inicio</a>
+    <span style="margin:0 8px;">›</span>
+    <a href="colecciones.html" style="color:var(--gold);">Productos</a>
+    <span style="margin:0 8px;">›</span>
+    <span id="breadcrumb-name">…</span>
+  </div>
+
+  <!-- PRODUCT DETAIL -->
+  <div class="product-detail" id="product-detail">
+    <div style="display:flex; align-items:center; justify-content:center; min-height:400px; color:var(--muted);">
+      Cargando producto…
+    </div>
+  </div>
+
+  <!-- RELATED PRODUCTS -->
+  <section class="related-section">
+    <h2 class="section-title" style="margin-bottom:32px;">También te puede <span>interesar</span></h2>
+    <div class="products-grid" id="related-grid"></div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/chat.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const id = new URLSearchParams(window.location.search).get('id');
+      const product = CATALOG.find(p => p.id === id);
+
+      if (!product) {
+        document.getElementById('product-detail').innerHTML = `
+          <div style="grid-column:1/-1; text-align:center; padding:80px 20px;">
+            <h2 style="font-family:var(--font-display); color:var(--brown); margin-bottom:16px;">Producto no encontrado</h2>
+            <p style="color:var(--muted); margin-bottom:24px;">El producto que buscas no existe o no está disponible.</p>
+            <a href="colecciones.html" class="btn btn-primary">Ver todos los productos</a>
+          </div>`;
+        return;
+      }
+
+      // Set page title
+      document.title = `${product.nombre} — Katheryn Boutique`;
+      document.getElementById('breadcrumb-name').textContent = product.nombre;
+
+      // Set product context for chat
+      window.__PRODUCT_CONTEXT__ = product;
+
+      // Render detail
+      const hasContenido = product.contenido && product.contenido.length > 0;
+      document.getElementById('product-detail').innerHTML = `
+        <div class="product-gallery">
+          <img src="${product.imagen}" alt="${product.nombre}">
+        </div>
+        <div class="product-detail-info">
+          <div class="detail-brand">${product.marca} · ${product.categoria}</div>
+          <h1 class="detail-name">${product.nombre}</h1>
+          <div class="detail-price">$${product.precio} <small>USD</small></div>
+          <p class="detail-desc">${product.descripcionLarga}</p>
+
+          ${hasContenido ? `
+            <div class="detail-section-title">Contenido del kit</div>
+            <div class="detail-desc" style="background:var(--warm); border-radius:12px; padding:14px 18px; margin-bottom:24px;">
+              ${product.contenido.map(c => `• ${c}`).join('<br>')}
+            </div>
+          ` : ''}
+
+          <div class="detail-section-title">Ingredientes destacados</div>
+          <div class="detail-tags" style="margin-bottom:24px;">
+            ${product.ingredientesDestacados.map(i => `<span>🌿 ${i}</span>`).join('')}
+          </div>
+
+          <div class="detail-section-title">Para tipo de cabello</div>
+          <div class="detail-tags" style="margin-bottom:24px;">
+            ${product.tiposCabello.map(t => `<span>${t}</span>`).join('')}
+          </div>
+
+          <div class="detail-section-title">Modo de uso</div>
+          <div class="detail-modo">${product.modoUso}</div>
+
+          <div class="detail-section-title" style="margin-bottom:10px;">Beneficios</div>
+          <div class="detail-tags" style="margin-bottom:28px;">
+            ${product.beneficios.map(b => `<span>✓ ${b}</span>`).join('')}
+          </div>
+
+          <a href="${product.urlTienda}" target="_blank" class="btn-comprar">
+            Comprar en tienda oficial →
+          </a>
+
+          <p style="text-align:center; font-size:0.75rem; color:var(--muted); margin-top:12px;">
+            Serás redirigida a ekaboutique.com · Compra 100% segura
+          </p>
+        </div>`;
+
+      // Render related (same hair types, different product)
+      const related = CATALOG.filter(p =>
+        p.id !== product.id &&
+        p.tiposCabello.some(t => product.tiposCabello.includes(t))
+      ).slice(0, 4);
+
+      const relGrid = document.getElementById('related-grid');
+      if (related.length > 0) {
+        related.forEach(p => { relGrid.innerHTML += buildProductCard(p); });
+      } else {
+        CATALOG.filter(p => p.id !== product.id && p.destacado).slice(0, 4)
+          .forEach(p => { relGrid.innerHTML += buildProductCard(p); });
+      }
+    });
+  </script>
+</body>
+</html>
