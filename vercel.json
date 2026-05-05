@@ -1,12 +1,7 @@
 {
   "version": 2,
-  "functions": {
-    "api/chat.js": {
-      "maxDuration": 60
-    }
-  },
   "builds": [
-    { "src": "api/chat.js", "use": "@vercel/node" },
+    { "src": "api/chat.js", "use": "@vercel/node", "config": { "maxDuration": 60 } },
     { "src": "index.html", "use": "@vercel/static" },
     { "src": "colecciones.html", "use": "@vercel/static" },
     { "src": "producto.html", "use": "@vercel/static" },
