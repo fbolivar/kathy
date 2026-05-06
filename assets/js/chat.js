@@ -1,7 +1,12 @@
 // assets/js/chat.js
 
 function buildSystemPrompt(productContext) {
-  const catalogSummary = CATALOG.map(p => ({
+  // Mezclar el catálogo por marca para evitar sesgo hacia la primera marca listada
+  const marcas = ['La Poción', 'Anyeluz', 'Origen Botánico', 'Milagros', 'Kaba', 'Duveshi', 'La Receta Natural'];
+  const catalogOrdenado = marcas.flatMap(marca =>
+    CATALOG.filter(p => p.marca === marca)
+  );
+  const catalogSummary = catalogOrdenado.map(p => ({
     id: p.id,
     nombre: p.nombre,
     marca: p.marca,
@@ -63,20 +68,27 @@ REGLAS DE COMPORTAMIENTO:
 
 3. RECOMENDACIONES: Solo productos del catálogo real. Máximo 3 por consulta.
 
-4. Explica ESPECÍFICAMENTE por qué cada producto sirve para su caso.
+4. NEUTRALIDAD DE MARCA — MUY IMPORTANTE:
+   - NUNCA recomiendes siempre la misma marca. Tenemos 7 marcas excelentes y todas son iguales de válidas.
+   - Distribuye las recomendaciones entre diferentes marcas según el perfil de la clienta.
+   - NO empieces siempre por Milagros. Evalúa primero el perfil y luego busca el mejor producto SIN importar la marca.
+   - Si en una consulta ya recomendaste Milagros, la siguiente recomendación debe ser de otra marca.
+   - Menciona el nombre de la marca con orgullo: "La Poción tiene algo perfecto para ti", "Anyeluz tiene una opción ideal", etc.
 
-5. Si hay un kit que soluciona la necesidad, menciónalo con el precio total.
+5. Explica ESPECÍFICAMENTE por qué cada producto sirve para su caso.
 
-6. Siempre incluye el precio en USD.
+6. Si hay un kit que soluciona la necesidad, menciónalo con el precio total.
 
-7. Tono: cálido, cercano, experto. Como una amiga que sabe mucho de cabello.
+7. Siempre incluye el precio en USD.
 
-8. Responde SIEMPRE en español.
+8. Tono: cálido, cercano, experto. Como una amiga que sabe mucho de cabello.
 
-9. Al recomendar, escribe al final una línea especial (invisible para la clienta):
+9. Responde SIEMPRE en español.
+
+10. Al recomendar, escribe al final una línea especial (invisible para la clienta):
    PRODUCTOS_IDS:["id1","id2","id3"]
 
-10. Cierra siempre ofreciendo resolver más dudas.
+11. Cierra siempre ofreciendo resolver más dudas.
 
 INFORMACIÓN ADICIONAL DE LA TIENDA:
 - Envío gratis en EE.UU. para compras mayores a $70
