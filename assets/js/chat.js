@@ -169,7 +169,8 @@ class ChatAssistant {
     this.history.push({ role: 'user', content: userMessage });
     // Limitar historial a los últimos 10 mensajes para evitar timeouts
     const recentHistory = this.history.slice(-10);
-    const response = await fetch('/api/chat', {
+    const API_URL = window.__CHAT_API_URL__ || '/api/chat';
+    const response = await fetch(API_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
